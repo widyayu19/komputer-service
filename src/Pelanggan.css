@@ -1,0 +1,158 @@
+/* ===== Tabel Pelanggan ===== */
+.table-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 40px 40px 0 40px; /* jarak luar kiri & kanan */
+  margin-top: 40px;
+}
+
+.h2 {
+  margin-left: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 20px;
+  border-spacing: 0;
+}
+
+thead {
+  background-color: #1d3b64; /* biru tua sesuai contoh */
+}
+
+thead th {
+  padding: 14px 18px;
+  font-weight: 600;
+  color: #ffffff; /* teks putih */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fbff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody td {
+  padding: 12px 18px;
+  color: #333;
+  border-bottom: 1px solid #edf2f7;
+  vertical-align: middle;
+  padding: 14px 18px;
+}
+
+
+tbody tr:hover {
+  background-color: #eef4ff;
+}
+
+td {
+  border: 1px dashed #ccc;
+}
+
+/* ===== Link ID Pelanggan ===== */
+a.id-link {
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.id-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Container ikon aksi */
+.action-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ini penting agar ikon sejajar vertikal */
+  gap: 10px;
+  height: 100%;
+}
+
+/* Tombol ikon */
+.action-icons button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Ikon Font Awesome */
+.action-icons i {
+  font-size: 16px;
+  line-height: 1;
+  vertical-align: middle;
+  position: relative;
+  top: -1px; /* tweak kecil agar pas di tengah */
+} 
+
+.action-icons i {
+  position: relative;
+  top: -1px;
+}
+
+.action-icons .edit {
+  color: #2563eb;
+}
+
+.action-icons .delete {
+  color: #dc2626;
+}
+
+.action-icons .edit:hover {
+  color: #1e40af;
+}
+
+.action-icons .delete:hover {
+  color: #991b1b;
+}
+
+
+/* ===== Header (Judul + Tombol Tambah) ===== */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 40px 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+  margin-left: 40px;
+  font-size: 24px;
+  color: #1d3b64;
+  margin-top: 20px;
+}
+
+/* ===== Tombol Tambah ===== */
+.btn-tambah {
+  background-color: #2563eb; /* biru modern */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tambah:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
+}
