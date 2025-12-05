@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pelanggan.css";
+import "../styles/Pelanggan.css";
 import { Link } from "react-router-dom";
 
 export default function Pelanggan() {

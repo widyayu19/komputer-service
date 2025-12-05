@@ -1,0 +1,70 @@
+/* Container Sidebar */
+.sidebar {
+  width: 210px;
+  background: #273469;
+  color: white;
+  height: 100vh;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* Logo Title */
+.sidebar-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.sidebar-title .tech {
+  color: white;
+}
+
+.sidebar-title .care {
+  color: #2F89FC;
+}
+
+/* Menu List */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.menu-item:hover {
+  background: #1c2552;
+}
+
+/* Active Item */
+.menu-item.active {
+  background: #e0eefb;
+  color: #273469;
+  font-weight: bold;
+}
+
+.menu-item.active .icon {
+  color: #273469;
+}
+
+/* Icon Style */
+.icon {
+  font-size: 18px;
+}

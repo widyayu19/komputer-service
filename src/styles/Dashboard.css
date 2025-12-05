@@ -1,0 +1,103 @@
+/* Agar isi dashboard tidak ketutup sidebar */
+.dashboard-page {
+  margin-left: 250px; /* Sesuaikan dengan width sidebar */
+  padding: 20px 30px;
+  margin-top: 80px; /* agar turun dari header */
+}
+
+
+/* Judul */
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* === CARD STYLE === */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid;
+}
+
+.card-header span {
+  font-size: 14px;
+  color: #444;
+}
+
+.card-value {
+  font-size: 28px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Card Colors */
+.card-blue { border-color: #1e40af; }
+.card-orange { border-color: #f97316; }
+.card-red { border-color: #dc2626; }
+
+/* === TABLE SECTION === */
+.section-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dashboard-table thead {
+  background: #0f2a55;
+  color: white;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background: #f2f6ff;
+}
+
+/* === FOOTER === */
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #1e40af;
+  color: white;
+  border-color: #1e40af;
+}
+
+.pagination button:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
