@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCalendarAlt, FaUsers, FaDollarSign, FaSearch } from "react-icons/fa";
 import "../styles/Dashboard.css";
 
 export default function Dashboard() {
@@ -10,31 +11,52 @@ export default function Dashboard() {
 
       {/* CARD SECTION */}
       <section className="cards">
+
+        {/* CARD 1 */}
         <div className="card card-blue">
           <div className="card-header">
             <span>Servis Baru (Harian)</span>
+            <FaCalendarAlt className="card-icon" />
           </div>
           <h2 className="card-value">3</h2>
         </div>
 
+        {/* CARD 2 */}
         <div className="card card-orange">
           <div className="card-header">
             <span>Total Pelanggan</span>
+            <FaUsers className="card-icon" />
           </div>
           <h2 className="card-value">6</h2>
         </div>
 
+        {/* CARD 3 */}
         <div className="card card-red">
           <div className="card-header">
             <span>Total Pendapatan Bulan Ini</span>
+            <FaDollarSign className="card-icon" />
           </div>
           <h2 className="card-value">Rp.0</h2>
         </div>
+
       </section>
 
       {/* TABLE SECTION */}
       <section className="table-section">
-        <h3 className="section-title">Pengambilan Hari Ini</h3>
+
+        {/* TITLE + SEARCH */}
+        <div className="table-header">
+          <h3 className="section-title">Pengambilan Hari Ini</h3>
+
+          <div className="search-wrapper">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
+          </div>
+        </div>
 
         <table className="dashboard-table">
           <thead>
@@ -103,6 +125,7 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

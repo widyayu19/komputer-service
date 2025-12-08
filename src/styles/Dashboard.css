@@ -1,9 +1,12 @@
 /* Agar isi dashboard tidak ketutup sidebar */
 .dashboard-page {
-  margin-left: 250px; /* Sesuaikan dengan width sidebar */
+  margin-left: 250px;
   padding: 20px 30px;
-  margin-top: 80px; /* agar turun dari header */
+  margin-top: 80px;
+  /* background: #8B8B8B;    */
+  min-height: 100vh;      /* supaya full sampai bawah */
 }
+
 
 
 /* Judul */
@@ -101,3 +104,61 @@
   background: #eee;
   cursor: not-allowed;
 }
+
+/* ICON di dalam card */
+/* Header hanya untuk judul */
+.card-header {
+  margin-bottom: 10px;
+}
+
+/* ICON: pindah ke pojok kanan bawah */
+.card {
+  position: relative;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 45px;
+  opacity: 0.15;
+}
+
+/* HEADER TABLE + SEARCH */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-input {
+  padding: 7px 12px 7px 32px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  width: 200px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #1e40af;
+  box-shadow: 0 0 3px rgba(30, 64, 175, 0.4);
+}
+
+
+
+

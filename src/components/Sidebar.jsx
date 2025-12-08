@@ -13,12 +13,13 @@ export default function Sidebar() {
   const { pathname } = useLocation();
 
   const menu = [
-    { name: "Dashboard", path: "/", icon: <FaTachometerAlt /> },
-    { name: "Pelanggan", path: "/pelanggan", icon: <FaUsers /> },
-    { name: "Servis", path: "/servis", icon: <FaTools /> },
-    { name: "Sparepart", path: "/sparepart", icon: <FaBoxes /> },
-    { name: "Data User", path: "/user", icon: <FaUserCog /> },
-  ];
+  { name: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt /> }, // ✔ perbaikan
+  { name: "Pelanggan", path: "/pelanggan", icon: <FaUsers /> },
+  { name: "Servis", path: "/servis", icon: <FaTools /> },
+  { name: "Sparepart", path: "/sparepart", icon: <FaBoxes /> },
+  { name: "Data User", path: "/user", icon: <FaUserCog /> },
+];
+
 
   return (
     <aside className="sidebar">
