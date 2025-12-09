@@ -7,9 +7,9 @@ import MainLayout from "./Layout/MainLayout";
 
 import Dashboard from "./pages/Dashboard";
 import Pelanggan from "./pages/Pelanggan";
-// import Servis from "./pages/Servis";
-// import Sparepart from "./pages/Sparepart";
-// import User from "./pages/User";
+import Servis from "./pages/Servis";
+import Sparepart from "./pages/Sparepart";
+import User from "./pages/User";
 
 export default function App() {
   return (
@@ -22,9 +22,9 @@ export default function App() {
       <Route element={<MainLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pelanggan" element={<Pelanggan />} />
-        {/* <Route path="/servis" element={<Servis />} />
+        <Route path="/servis" element={<Servis />} />
         <Route path="/sparepart" element={<Sparepart />} />
-        <Route path="/datauser" element={<User />} /> */}
+        <Route path="/datauser" element={<User />} />
       </Route>
       
     </Routes>
