@@ -1,6 +1,6 @@
 /* Container Sidebar */
 .sidebar {
-  width: 210px;
+  width: 250px;
   background: #273469;
   color: white;
   height: 100vh;
@@ -10,6 +10,13 @@
   position: fixed;
   left: 0;
   top: 0;
+}
+
+/* Allow vertical scrolling when sidebar content is taller than the viewport */
+.sidebar {
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Logo Title */
@@ -67,4 +74,51 @@
 /* Icon Style */
 .icon {
   font-size: 18px;
+}
+/* =============== SUBMENU BARU (TIDAK MENGGANGGU STYLE LAIN) =============== */
+
+.submenu {
+  margin-left: 28px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.submenu-item {
+  display: block;
+  font-size: 14px;
+  color: #d9e4ff;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.submenu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+
+.submenu-item.active {
+  background: #e0eefb;
+  color: #273469;
+  font-weight: 700;
+}
+
+/* Chevron icon rotation */
+.chevron {
+  margin-left: auto;
+  transition: transform 0.18s ease;
+  opacity: 0.9;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Make dropdown header clickable-looking */
+.menu-item.dropdown {
+  cursor: pointer;
+  user-select: none;
 }

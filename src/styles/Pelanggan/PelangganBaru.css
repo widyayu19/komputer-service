@@ -1,0 +1,122 @@
+/* Styles khusus untuk halaman Pelanggan Baru (dipisah dari Pelanggan.css) */
+.pelanggan-form {
+  max-width: 700px;
+  margin: 0;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.pelanggan-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.pelanggan-form input,
+.pelanggan-form textarea,
+.pelanggan-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.pelanggan-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.pelanggan-form .form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.pelanggan-form .form-row .col {
+  flex: 1;
+}
+
+.pelanggan-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 720px) {
+  .pelanggan-form { padding: 12px; }
+  .pelanggan-form .form-row { flex-direction: column; }
+}
+
+.pelanggan-page-title {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FIX CARD & REMOVE DOUBLE-STYLING
+   ========================= */
+
+.table-wrapper.card-form-wrapper {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* CARD BIRU TUA */
+.card-form-wrapper {
+  max-width: 760px;
+  background: #1B2A4A !important;  /* WARNA CARD BIRU TUA */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+  border-left: 6px solid #3A7BFF !important;  /* GARIS BIRU CERAH */
+  padding: 18px 22px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Hilangkan garis/setengah border aneh */
+.card-form-wrapper::before,
+.card-form-wrapper::after {
+  display: none !important;
+}
+
+/* Tombol Save */
+.card-form-wrapper .btn-save {
+  background: #3A7BFF !important;
+  color: white !important;
+}
+
+.card-form-wrapper .btn-save:hover {
+  background: #2d63cc !important;
+}
+
+/* Input form styling */
+.card-form-wrapper .pelanggan-form input,
+.card-form-wrapper .pelanggan-form textarea,
+.card-form-wrapper .pelanggan-form select {
+  background: #ffffff !important;
+  border: 1px solid #d0d8e8 !important;
+  color: #0f1a30;
+}
+
+.card-form-wrapper .pelanggan-form input:focus,
+.card-form-wrapper .pelanggan-form textarea:focus,
+.card-form-wrapper .pelanggan-form select:focus {
+  border-color: #3A7BFF !important;
+  box-shadow: 0 0 0 4px rgba(58, 123, 255, 0.22) !important;
+}
+
+/* Label putih supaya kontras */
+.card-form-wrapper .pelanggan-form label {
+  color: #0a0a0a !important;
+}
+
+@media (max-width: 720px) {
+  .card-form-wrapper { padding-left: 12px; padding-right: 12px; }
+}
