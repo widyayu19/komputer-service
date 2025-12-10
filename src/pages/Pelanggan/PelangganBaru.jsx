@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../styles/Pelanggan/Pelanggan.css";
 import "../../styles/Pelanggan/PelangganBaru.css";
 
 function loadPelanggan() {
@@ -27,7 +26,6 @@ export default function PelangganBaru() {
     const stored = loadPelanggan();
     if (stored && stored.length) setPelanggan(stored);
     else {
-      // default data if none
       const defaults = [
         { id: "CUST001", nama: "Andi Pratama", telp: "081234567890", alamat: "Jl. Raya Ubud No.15, Gianyar, Bali" },
         { id: "CUST002", nama: "Budi Santoso", telp: "081234567891", alamat: "Jl. Raya Seminyak No.10, Kuta, Bali" },
@@ -42,7 +40,6 @@ export default function PelangganBaru() {
   }, []);
 
   useEffect(() => {
-    // generate id when pelanggan list loaded/changes
     const last = pelanggan[pelanggan.length - 1]?.id;
     if (!last) setFormData((s) => ({ ...s, id: "CUST001" }));
     else {
@@ -54,7 +51,6 @@ export default function PelangganBaru() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // validate unique telp
     const exists = pelanggan.some((p) => p.telp === formData.telp);
     if (exists) {
       alert("No telepon sudah terdaftar!");
@@ -69,9 +65,10 @@ export default function PelangganBaru() {
 
   return (
     <div className="dashboard-page">
-      <h2 className="dashboard-title pelanggan-title pelanggan-page-title">Tambah Pelanggan</h2>
+      {/* Card wrapper */}
+      <div className="card-form-wrapper">
+        <h2 className="dashboard-title pelanggan-title pelanggan-page-title">Pelanggan Baru</h2>
 
-      <div className="table-wrapper card-form-wrapper">
         <form className="pelanggan-form" onSubmit={handleSubmit}>
           <label>ID Pelanggan</label>
           <input type="text" value={formData.id} readOnly />
@@ -99,7 +96,7 @@ export default function PelangganBaru() {
             required
           />
 
-          <div className="popup-buttons" style={{ marginTop: 12 }}>
+          <div className="form-actions">
             <button type="submit" className="btn-save">Simpan</button>
             <button type="button" className="btn-cancel" onClick={() => navigate("/pelanggan")}>Batal</button>
           </div>

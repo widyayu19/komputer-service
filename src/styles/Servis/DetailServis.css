@@ -1,0 +1,520 @@
+/* ================================
+   CARD
+================================ */
+.detail-card {
+  background: #ffffff;
+  padding: 26px 28px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #ececec;
+}
+
+.detail-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f2a55;
+}
+
+
+/* ================================
+   GRID
+================================ */
+.detail-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 40px;
+}
+
+.detail-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 16px;
+}
+
+@media (max-width: 780px) {
+  .detail-grid-2,
+  .detail-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-card strong {
+  font-weight: 600;
+  color: #0f2a55;
+}
+
+
+/* ================================
+   ITEM DATA
+================================ */
+.detail-item {
+  background: #ffffff;
+  padding: 14px 16px;
+  border: 1px solid #d4d9e6;
+  border-radius: 8px;
+  color: #0f2a55;
+}
+
+.detail-item strong {
+  color: #0f2a55;
+}
+
+
+/* ================================
+   TABLE RIWAYAT
+================================ */
+.detail-card table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.detail-card table thead {
+  background: #0f2a55;
+  color: white;
+}
+
+.detail-card table th,
+.detail-card table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-card table tbody tr:nth-child(even) {
+  background: #f4f7ff;
+}
+
+
+/* ================================
+   BUTTON DETAIL + DELETE
+================================ */
+.btn-detail {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 6px;
+}
+
+.btn-detail:hover {
+  background-color: #2980b9;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+.action-icons {
+  text-align: center;
+}
+
+
+/* ================================
+   BUTTON BACK
+================================ */
+.btn-back {
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background-color: #0f2a55;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-back:hover {
+  background-color: #0a1d3d;
+}
+
+
+/* =====================================================
+   STATUS BOX (FINAL FIXED VERSION)
+===================================================== */
+
+/* Container header detail */
+.detail-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Judul */
+.detail-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.detail-title span {
+  color: #1e66ff;
+}
+
+/* Status box */
+.status-edit-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Badge Status */
+.status-badge {
+  padding: 7px 16px;
+  font-size: 19px;        /* 🔥 FONT STATUS DIBESARKAN */
+  font-weight: 700;       /* Biar lebih tegas */
+  border-radius: 10px;
+  text-transform: capitalize;
+  display: inline-block;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* =====================================================
+   WARNA SETIAP STATUS — SUDAH ESCAPED 100% AKURAT
+===================================================== */
+
+/* Diterima - Biru muda */
+.status-badge[class*="Diterima"] {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+/* Dalam Diagnosa - Kuning muda */
+.status-badge[class*="Diagnosa"] {
+  background: #fff9c4;
+  color: #8a6d3b;
+}
+
+/* Menunggu Persetujuan - Orange muda */
+.status-badge[class*="Persetujuan"] {
+  background: #ffe0b2;
+  color: #e65100;
+}
+
+/* Dalam Pengerjaan - Hijau muda */
+.status-badge[class*="Pengerjaan"] {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Menunggu Sparepart - Ungu muda */
+.status-badge[class*="Sparepart"] {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+/* Selesai - Hijau terang */
+.status-badge[class*="Selesai"] {
+  background: #c8e6c9;
+  color: #1b5e20;
+}
+
+/* Menunggu Pembayaran - Merah muda */
+.status-badge[class*="Pembayaran"] {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Diambil - Cyan muda */
+.status-badge[class*="Diambil"] {
+  background: #e0f7fa;
+  color: #006064;
+}
+
+/* ICON EDIT */
+.edit-status-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #1e66ff;
+  transition: 0.2s ease;
+}
+
+.edit-status-icon:hover {
+  color: #0044cc;
+  transform: scale(1.15);
+}
+
+/* Dropdown */
+.status-dropdown {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 2px solid #cfd8dc;
+  background: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.status-dropdown:hover {
+  border-color: #1e66ff;
+}
+
+.status-dropdown:focus {
+  border-color: #1e66ff;
+  box-shadow: 0 0 4px rgba(30, 102, 255, 0.4);
+}
+
+
+
+
+/* ================================
+   TABLE LIST SERVIS
+================================ */
+.table-servis th:nth-child(6),
+.table-servis td:nth-child(6) {
+  text-align: center;
+  width: 180px;
+}
+
+.action-icons button {
+  font-size: 13px;
+}
+
+/* Foto hide */
+.foto-barang {
+  display: none !important;
+}
+
+
+/* ================================
+   SPASI EXTRA GRID
+================================ */
+.info-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-grid-3 .info-grid-item,
+.detail-grid-2 .info-grid-item {
+  padding: 8px 10px;
+}
+
+
+/* ================================
+   FORM DIAGNOSA EDIT MODE
+================================ */
+.edit-diagnosa-form {
+  margin-top: 16px;
+  background: #f9fbff;
+  padding: 18px 22px;
+  border-radius: 8px;
+  border: 1px solid #d9e3ff;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 26px;
+  margin-top: 10px;
+}
+
+@media (max-width: 780px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #0f2a55;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 6px;
+  border: 1px solid #c7d4f7;
+  border-radius: 6px;
+}
+
+
+/* BUTTON SAVE/CANCEL */
+.edit-diagnosa-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.btn-save,
+.btn-cancel {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-save {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #1e874b;
+}
+
+.btn-cancel {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #c0392b;
+}
+
+
+/* ================================
+   INFO BARANG GRID
+================================ */
+.info-barang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.info-item {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #d4d9e6;
+}
+
+.info-item b {
+  color: #0f2a55;
+}
+
+
+/* ==================================================
+   BUTTON EDIT DIAGNOSA FIX
+================================================== */
+.diagnosa-wrapper {
+  position: relative;
+  padding-bottom: 42px;
+}
+
+.diagnosa-view {
+  margin-bottom: 12px;
+}
+
+
+/* ================================
+   BUTTON EDIT INFO
+================================ */
+.btn-edit-info {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn-edit-info:hover {
+  background-color: #2980b9;
+}
+
+/* posisi tombol edit info: sejajar dengan tombol edit diagnosa */
+.info-card {
+  position: relative;
+  padding: 32px 36px; /* lebih besar */
+  min-height: 220px;
+}
+
+.btn-edit-info {
+  position: static; /* non-absolute supaya berada di alur dokumen */
+  float: right; /* pojok kanan, tepat di bawah Informasi Barang */
+  margin-top: 12px;
+}
+
+.info-card:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ================================
+   SECTION LABEL DALAM CARD
+================================ */
+.section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f2a55;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-label:first-child {
+  margin-top: 0;
+}
+
+
+/* ================================
+   EDIT INFO FORM
+================================ */
+.edit-info-form {
+  background: #f9fbff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #d9e3ff;
+}
+
+.edit-info-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.btn-edit-diagnosa {
+  background-color: #1e66ff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+}
+
+.btn-edit-diagnosa:hover {
+  background-color: #164fcc;
+}
+
+
+/* RESPONSIVE EXTRA */
+@media (max-width: 900px) {
+  .info-barang-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

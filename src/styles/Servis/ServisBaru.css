@@ -1,0 +1,133 @@
+/* Styles khusus untuk halaman Servis Baru */
+.service-form {
+  max-width: 100%; /* ubah supaya form full lebar card */
+  margin: 0;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.service-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0a0a0a;
+}
+
+.service-form input,
+.service-form textarea,
+.service-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #0f1a30;
+}
+
+.service-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.service-form .form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.service-form .form-row .col {
+  flex: 1;
+}
+
+.service-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Fokus input */
+.service-form input:focus,
+.service-form textarea:focus,
+.service-form select:focus {
+  border-color: #7da1ff;
+  box-shadow: 0 0 0 4px rgba(125, 161, 255, 0.22);
+}
+
+/* Card wrapper */
+.service-card {
+  width: calc(100% - 320px); /* full sisa layar setelah sidebar */
+  max-width: calc(100% - 320px);
+  background: #ecedee; /* warna kalem */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 22px;
+  margin: 100px 0 20px 280px; /* sedikit jarak dari sidebar dan header */
+  box-sizing: border-box;
+  border-left: none; /* hilangkan list biru */
+}
+
+/* Judul halaman */
+.service-page-title {
+  margin-bottom: 20px;
+  color: #0f1a30;
+  font-weight: 600;
+}
+
+/* Tombol Save */
+.btn-save {
+  background: #7da1ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-save:hover {
+  background: #5c7dd1;
+}
+
+/* Tombol Cancel */
+.btn-cancel {
+  background: #da0909 !important; /* merah */
+  color: white !important;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: #b00707 !important; /* merah lebih gelap saat hover */
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-card {
+    width: calc(100% - 40px); /* full layar minus sedikit padding kiri-kanan */
+    max-width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .service-card {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 12px; /* beri sedikit jarak dari kiri */
+    margin-right: 12px; /* beri jarak kanan agar rapi */
+  }
+
+  .service-form .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,6 @@
-/* Styles khusus untuk halaman Pelanggan Baru (dipisah dari Pelanggan.css) */
+/* Styles khusus untuk halaman Pelanggan Baru */
 .pelanggan-form {
-  max-width: 700px;
+  max-width: 100%; /* full-width di dalam card */
   margin: 0;
   padding: 18px 0;
   display: flex;
@@ -13,6 +13,7 @@
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 6px;
+  color: #0a0a0a;
 }
 
 .pelanggan-form input,
@@ -25,6 +26,8 @@
   outline: none;
   font-size: 14px;
   box-sizing: border-box;
+  background: #ffffff;
+  color: #0f1a30;
 }
 
 .pelanggan-form textarea {
@@ -48,17 +51,12 @@
   margin-top: 6px;
 }
 
-@media (max-width: 720px) {
-  .pelanggan-form { padding: 12px; }
-  .pelanggan-form .form-row { flex-direction: column; }
-}
-
 .pelanggan-page-title {
   margin-bottom: 20px;
 }
 
 /* =========================
-   FIX CARD & REMOVE DOUBLE-STYLING
+   CARD BIRU KALIAN / KALIAN SESUAI SERVIS.CSS
    ========================= */
 
 .table-wrapper.card-form-wrapper {
@@ -68,16 +66,17 @@
   padding: 0 !important;
 }
 
-/* CARD BIRU TUA */
+/* CARD WARNA KALEM */
 .card-form-wrapper {
-  max-width: 760px;
-  background: #1B2A4A !important;  /* WARNA CARD BIRU TUA */
+  max-width: 800px; /* sama seperti service-card */
+  width: calc(100% - 320px); /* full sisa layar setelah sidebar */
+  background: #ecedee !important;  /* warna kalem */
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
-  border-left: 6px solid #3A7BFF !important;  /* GARIS BIRU CERAH */
-  padding: 18px 22px;
-  margin-left: 0;
-  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 22px;
+  margin: 8px 0 20px 10px; /* sedikit jarak dari sidebar dan header */
+  border-left: none !important;  /* hilangkan garis biru */
+  box-sizing: border-box;
 }
 
 /* Hilangkan garis/setengah border aneh */
@@ -88,13 +87,24 @@
 
 /* Tombol Save */
 .card-form-wrapper .btn-save {
-  background: #3A7BFF !important;
+  background: #7da1ff !important;
   color: white !important;
 }
 
 .card-form-wrapper .btn-save:hover {
-  background: #2d63cc !important;
+  background: #5c7dd1 !important;
 }
+
+/* Tombol Cancel */
+.card-form-wrapper .btn-cancel {
+  background: #da0909 !important;
+  color: white !important;
+  border: none;
+}
+
+/* .card-form-wrapper .btn-cancel:hover {
+  background: #c4c4c4 !important;
+} */
 
 /* Input form styling */
 .card-form-wrapper .pelanggan-form input,
@@ -108,15 +118,33 @@
 .card-form-wrapper .pelanggan-form input:focus,
 .card-form-wrapper .pelanggan-form textarea:focus,
 .card-form-wrapper .pelanggan-form select:focus {
-  border-color: #3A7BFF !important;
-  box-shadow: 0 0 0 4px rgba(58, 123, 255, 0.22) !important;
+  border-color: #7da1ff !important;
+  box-shadow: 0 0 0 4px rgba(125, 161, 255, 0.22) !important;
 }
 
-/* Label putih supaya kontras */
+/* Label warna hitam supaya kontras */
 .card-form-wrapper .pelanggan-form label {
   color: #0a0a0a !important;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+  .card-form-wrapper {
+    width: calc(100% - 40px); /* full layar minus sedikit padding kiri-kanan */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 @media (max-width: 720px) {
-  .card-form-wrapper { padding-left: 12px; padding-right: 12px; }
+  .card-form-wrapper { 
+    padding-left: 12px; 
+    padding-right: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .pelanggan-form .form-row { 
+    flex-direction: column; 
+  }
 }

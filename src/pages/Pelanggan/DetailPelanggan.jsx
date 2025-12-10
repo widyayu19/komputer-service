@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../styles/Pelanggan/Pelanggan.css";
+import "../../styles/Pelanggan/DetailPelanggan.css";
 
 function loadPelanggan() {
   try {

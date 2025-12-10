@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/Pelanggan/Pelanggan.css"; // gunakan CSS Pelanggan yang ada di src/styles
+import "../../styles/Sparepart/Sparepart.css";
 
 export default function Sparepart() {
   const [search, setSearch] = useState("");
