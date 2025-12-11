@@ -2,11 +2,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";     // ✔ letaknya benar
+import LoginPage from "./pages/LoginPage";     
 import MainLayout from "./Layout/MainLayout";
 
 // Halaman utama
-import Dashboard from "./pages/Dashboard";     // ✔ letaknya benar
+import Dashboard from "./pages/Dashboard";     
 
 // Pelanggan
 import DetailPelanggan from "./pages/Pelanggan/DetailPelanggan";
@@ -16,13 +16,14 @@ import PelangganBaru from "./pages/Pelanggan/PelangganBaru";
 import ServisBaru from "./pages/Servis/ServisBaru";
 import DetailServis from "./pages/Servis/DetailServise";
 
-// Sprepart (kamu nulis "sperpart")
+// Sperpart
 import KategoriSperpart from "./pages/Sperpart/KategoriSperpart";
 import SperpartBaru from "./pages/Sperpart/SperpartBaru";
 import DetailSperpart from "./pages/Sperpart/DetailSperpart";
 
 // User
-import UserPage from "./pages/User/User";     // ✔ rename variabel biar ga bentrok
+import UserBaru from "./pages/User/UserBaru";        // Tambahan
+import DetailUser from "./pages/User/DetailUser";    // Tambahan
 
 export default function App() {
   return (
@@ -43,12 +44,14 @@ export default function App() {
         <Route path="/servis" element={<DetailServis />} />
 
         {/* Sperpart */}
-<Route path="/kategori-sperpart" element={<KategoriSperpart />} />
-<Route path="/sperpart-baru" element={<SperpartBaru />} />
-<Route path="/sperpart" element={<DetailSperpart />} />
+        <Route path="/kategori-sperpart" element={<KategoriSperpart />} />
+        <Route path="/sperpart-baru" element={<SperpartBaru />} />
+        <Route path="/sperpart" element={<DetailSperpart />} />
 
         {/* User */}
-        <Route path="/user" element={<UserPage />} />
+        <Route path="/user-baru" element={<UserBaru />} />
+<Route path="/user" element={<DetailUser />} />
+
       </Route>
     </Routes>
   );

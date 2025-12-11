@@ -1,0 +1,158 @@
+/* Styles khusus untuk halaman User Baru */
+.user-form {
+  max-width: 100%;
+  margin: 0;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.user-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0a0a0a;
+}
+
+.user-form input,
+.user-form textarea,
+.user-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #0f1a30;
+}
+
+.user-form .form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.user-form .form-row .col {
+  flex: 1;
+}
+
+.user-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.user-page-title {
+  margin-bottom: 20px;
+}
+
+/* CARD WARNA KALEM */
+.card-form-wrapper {
+  max-width: 800px;
+  width: calc(100% - 320px);
+  background: #ecedee !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 22px;
+  margin: 8px 0 20px 10px;
+  border-left: none !important;
+  box-sizing: border-box;
+}
+
+.card-form-wrapper::before,
+.card-form-wrapper::after {
+  display: none !important;
+}
+
+/* Tombol Save */
+.card-form-wrapper .btn-save {
+  background: #7da1ff !important;
+  color: white !important;
+}
+
+.card-form-wrapper .btn-save:hover {
+  background: #5c7dd1 !important;
+}
+
+/* Tombol Cancel */
+.card-form-wrapper .btn-cancel {
+  background: #da0909 !important;
+  color: white !important;
+  border: none;
+}
+
+/* Input form styling */
+.card-form-wrapper .user-form input,
+.card-form-wrapper .user-form textarea,
+.card-form-wrapper .user-form select {
+  background: #ffffff !important;
+  border: 1px solid #d0d8e8 !important;
+  color: #0f1a30;
+}
+
+.card-form-wrapper .user-form input:focus,
+.card-form-wrapper .user-form textarea:focus,
+.card-form-wrapper .user-form select:focus {
+  border-color: #7da1ff !important;
+  box-shadow: 0 0 0 4px rgba(125, 161, 255, 0.22) !important;
+}
+
+/* Label warna hitam supaya kontras */
+.card-form-wrapper .user-form label {
+  color: #0a0a0a !important;
+}
+
+/* Popup sukses */
+.popup-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: #ffffff;
+  padding: 18px 28px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  font-size: 16px;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card-form-wrapper {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card-form-wrapper { 
+    padding-left: 12px; 
+    padding-right: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .user-form .form-row { 
+    flex-direction: column; 
+  }
+}

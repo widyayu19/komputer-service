@@ -1,0 +1,207 @@
+/* =============================== */
+/* Wrapper halaman mengikuti layout dashboard */
+.dashboard-page {
+  margin-left: 250px;
+  padding: 20px 30px;
+  margin-top: 80px; 
+  font-family: Arial, sans-serif;
+}
+
+/* Judul halaman / Toolbar */
+.user-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Toolbar: Tombol Tambah + Search */
+.user-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.btn-tambah {
+  background-color: #1084eb;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-tambah:hover {
+  background-color: #0c6ecb;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  width: 220px;
+  padding: 8px 12px 8px 30px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Tabel data user */
+.table-wrapper {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table thead {
+  background: #0f2a55;
+  color: white;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background: #f2f6ff;
+}
+
+/* Action Icons */
+.action-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+  border: none !important;
+  background: none !important;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 !important;
+}
+
+.btn-edit { 
+  color: #2563eb !important;
+}
+.btn-edit:hover { 
+  color: #1e40af !important;
+}
+
+.btn-delete { 
+  color: #dc2626 !important;
+}
+.btn-delete:hover { 
+  color: #991b1b !important;
+}
+
+/* Popup Edit User */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-overlay .popup-box {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.popup-box h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.popup-box input,
+.popup-box select {
+  width: 100%;
+  padding: 10px !important;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-save {
+  background-color: #1084eb;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #0c6ecb;
+}
+
+.btn-cancel {
+  background: #ccc;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: #b3b3b3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-box input {
+    width: 150px;
+  }
+
+  .user-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
