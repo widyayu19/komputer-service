@@ -1,0 +1,130 @@
+.dashboard-page {
+  margin-left: 250px;
+  padding: 20px 30px;
+  margin-top: 80px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* ========================= */
+/* FORM KATEGORI */
+/* ========================= */
+
+.card-form-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  max-width: 420px;
+}
+
+.kategori-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kategori-form input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 8px 0 14px 0;
+}
+
+.btn-save {
+  background-color: #1084eb;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.btn-save:hover {
+  background-color: #0c6ecb;
+}
+
+.btn-cancel {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #b91c1c;
+}
+
+/* ========================= */
+/* TABLE */
+/* ========================= */
+
+.table-wrapper {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table thead {
+  background: #0f2a55;
+  color: white;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background: #f2f6ff;
+}
+
+/* ========================= */
+/* ACTION ICONS */
+/* ========================= */
+
+.action-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+  border: none !important;
+  background: none !important;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 !important;
+}
+
+.btn-edit {
+  color: #2563eb !important;
+}
+
+.btn-edit:hover {
+  color: #1e40af !important;
+}
+
+.btn-delete {
+  color: #dc2626 !important;
+}
+
+.btn-delete:hover {
+  color: #991b1b !important;
+}

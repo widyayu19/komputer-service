@@ -2,32 +2,53 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";
+import LoginPage from "./pages/LoginPage";     // ✔ letaknya benar
 import MainLayout from "./Layout/MainLayout";
 
-import Dashboard from "./pages/Dashboard";
+// Halaman utama
+import Dashboard from "./pages/Dashboard";     // ✔ letaknya benar
+
+// Pelanggan
 import DetailPelanggan from "./pages/Pelanggan/DetailPelanggan";
 import PelangganBaru from "./pages/Pelanggan/PelangganBaru";
+
+// Servis
 import ServisBaru from "./pages/Servis/ServisBaru";
 import DetailServis from "./pages/Servis/DetailServise";
-import Sparepart from "./pages/Sparepart/Sparepart";
-import User from "./pages/User/User";
+
+// Sprepart (kamu nulis "sperpart")
+import KategoriSperpart from "./pages/Sperpart/KategoriSperpart";
+import SperpartBaru from "./pages/Sperpart/SperpartBaru";
+import DetailSperpart from "./pages/Sperpart/DetailSperpart";
+
+// User
+import UserPage from "./pages/User/User";     // ✔ rename variabel biar ga bentrok
 
 export default function App() {
   return (
     <Routes>
-      {/* Login tidak memakai layout */}
+      {/* Login tidak pakai layout */}
       <Route path="/" element={<LoginPage />} />
 
-      {/* Semua halaman utama memakai layout */}
+      {/* Semua halaman dengan layout */}
       <Route element={<MainLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Pelanggan */}
         <Route path="/pelanggan-baru" element={<PelangganBaru />} />
         <Route path="/pelanggan" element={<DetailPelanggan />} />
+
+        {/* Servis */}
         <Route path="/servis-baru" element={<ServisBaru />} />
         <Route path="/servis" element={<DetailServis />} />
-        <Route path="/sparepart" element={<Sparepart />} />
-        <Route path="/user" element={<User />} />
+
+        {/* Sperpart */}
+<Route path="/kategori-sperpart" element={<KategoriSperpart />} />
+<Route path="/sperpart-baru" element={<SperpartBaru />} />
+<Route path="/sperpart" element={<DetailSperpart />} />
+
+        {/* User */}
+        <Route path="/user" element={<UserPage />} />
       </Route>
     </Routes>
   );

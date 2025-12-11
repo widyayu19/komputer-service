@@ -105,18 +105,31 @@
   gap: 10px;
 }
 
+/* Supaya tidak ketimpa background merah dari CSS lain */
 .btn-edit, .btn-delete {
-  border: none;
-  background: none;
+  border: none !important;
+  background: none !important;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;          /* biar ikon lebih tegas */
+  padding: 0 !important;    /* cegah tombol jadi kotak */
 }
 
-.btn-edit { color: #2563eb; }
-.btn-delete { color: #dc2626; }
+/* Edit icon */
+.btn-edit { 
+  color: #2563eb !important;
+}
+.btn-edit:hover { 
+  color: #1e40af !important;
+}
 
-.btn-edit:hover { color: #1e40af; }
-.btn-delete:hover { color: #991b1b; }
+/* Delete icon */
+.btn-delete { 
+  color: #dc2626 !important;
+}
+.btn-delete:hover { 
+  color: #991b1b !important;
+}
+
 
 /* =============================== */
 /* Back Button */
@@ -179,6 +192,92 @@
 .log-table tbody tr:nth-child(even) {
   background: #f2f6ff;
 }
+
+/* =============================== */
+/* Popup Edit Pelanggan */
+/* =============================== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-overlay .popup-box {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 2+5px 30px;    /* tambah padding kanan-kiri */
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+
+
+.popup-box h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.popup-box input,
+.popup-box textarea {
+  width: 100%;
+  padding: 10px !important;   /* ubah padding di sini */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  outline: none;
+  resize: none;
+}
+
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-save {
+  background-color: #1084eb;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #0c6ecb;
+}
+
+.btn-cancel {
+  background: #ccc;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: #b3b3b3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 
 /* =============================== */
 /* Tambahan responsive jika perlu */

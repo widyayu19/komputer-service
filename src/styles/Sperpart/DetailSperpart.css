@@ -1,0 +1,156 @@
+/* Wrapper halaman detail */
+.detail-wrapper {
+  margin-left: 250px;
+  margin-top: 80px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+/* Judul halaman */
+.detail-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #0f1a30;
+}
+
+/* CARD UTAMA */
+.detail-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: calc(100% - 320px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* GRID DETAIL */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-bottom: 4px;
+}
+
+.detail-item span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a0a0a;
+  background: #f6f6f7;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdfe6;
+}
+
+/* STATUS BADGE */
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.status-ready {
+  background: #e1ffe6;
+  color: #1b8f2f;
+}
+
+.status-habis {
+  background: #ffe1e1;
+  color: #b50000;
+}
+
+.status-menunggu {
+  background: #fff4d6;
+  color: #b07b00;
+}
+
+/* BUTTON ACTION */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-edit {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #7da1ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: #5b7ad4;
+}
+
+.btn-delete {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #da0909;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #b40606;
+}
+
+/* FORM EDIT MODE */
+.detail-card input,
+.detail-card select,
+.detail-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.detail-card input:focus,
+.detail-card select:focus,
+.detail-card textarea:focus {
+  border-color: #7da1ff;
+  box-shadow: 0 0 0 3px rgba(125,161,255,0.25);
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn-save {
+  background: #7da1ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-cancel {
+  background: #999;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+}

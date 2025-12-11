@@ -17,12 +17,11 @@ export default function Sidebar() {
   // Dropdown state
   const [openPelanggan, setOpenPelanggan] = useState(false);
   const [openServis, setOpenServis] = useState(false);
-  const [openSparepart, setOpenSparepart] = useState(false);
+  const [openSperpart, setOpenSperpart] = useState(false);
   const [openUser, setOpenUser] = useState(false);
 
   return (
     <aside className="sidebar">
-
       {/* LOGO */}
       <div className="sidebar-title">
         <span className="tech">Tech</span>
@@ -31,9 +30,7 @@ export default function Sidebar() {
 
       <nav className="sidebar-menu">
 
-        {/* =========================
-            DASHBOARD 
-        ========================== */}
+        {/* DASHBOARD */}
         <Link
           to="/dashboard"
           className={`menu-item ${pathname === "/dashboard" ? "active" : ""}`}
@@ -42,9 +39,7 @@ export default function Sidebar() {
           <span>Dashboard</span>
         </Link>
 
-        {/* =========================
-            PELANGGAN DROPDOWN 
-        ========================== */}
+        {/* PELANGGAN */}
         <div
           className="menu-item dropdown"
           onClick={() => setOpenPelanggan(!openPelanggan)}
@@ -72,9 +67,7 @@ export default function Sidebar() {
           </div>
         )}
 
-        {/* =========================
-            SERVIS DROPDOWN 
-        ========================== */}
+        {/* SERVIS */}
         <div
           className="menu-item dropdown"
           onClick={() => setOpenServis(!openServis)}
@@ -102,46 +95,42 @@ export default function Sidebar() {
           </div>
         )}
 
-        {/* =========================
-            SPAREPART DROPDOWN 
-        ========================== */}
+        {/* SPERPART — FIXED */}
         <div
           className="menu-item dropdown"
-          onClick={() => setOpenSparepart(!openSparepart)}
+          onClick={() => setOpenSperpart(!openSperpart)}
         >
           <span className="icon"><FaBoxes /></span>
-          <span>Sparepart</span>
-          <FaChevronDown className={`chevron ${openSparepart ? "open" : ""}`} />
+          <span>Sperpart</span>
+          <FaChevronDown className={`chevron ${openSperpart ? "open" : ""}`} />
         </div>
 
-        {openSparepart && (
+        {openSperpart && (
           <div className="submenu">
             <Link
-              to="/kategori-sparepart"
-              className={`submenu-item ${pathname === "/kategori-sparepart" ? "active" : ""}`}
+              to="/kategori-sperpart"
+              className={`submenu-item ${pathname === "/kategori-sperpart" ? "active" : ""}`}
             >
-              Kategori Sparepart
+              Kategori Sperpart
             </Link>
 
             <Link
-              to="/sparepart-baru"
-              className={`submenu-item ${pathname === "/sparepart-baru" ? "active" : ""}`}
+              to="/sperpart-baru"
+              className={`submenu-item ${pathname === "/sperpart-baru" ? "active" : ""}`}
             >
-              Sparepart Baru
+              Sperpart Baru
             </Link>
 
             <Link
-              to="/sparepart"
-              className={`submenu-item ${pathname === "/sparepart" ? "active" : ""}`}
+              to="/sperpart"
+              className={`submenu-item ${pathname === "/sperpart" ? "active" : ""}`}
             >
-              Detail Sparepart
+              Detail Sperpart
             </Link>
           </div>
         )}
 
-        {/* =========================
-            USER DROPDOWN 
-        ========================== */}
+        {/* USER */}
         <div
           className="menu-item dropdown"
           onClick={() => setOpenUser(!openUser)}
