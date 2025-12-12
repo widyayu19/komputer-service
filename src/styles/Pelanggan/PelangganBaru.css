@@ -66,18 +66,20 @@
   padding: 0 !important;
 }
 
-/* CARD WARNA KALEM */
+/* CARD FORM WRAPPER - sama persis dengan .detail-card */
+/* Override background card */
 .card-form-wrapper {
-  max-width: 800px; /* sama seperti service-card */
-  width: calc(100% - 320px); /* full sisa layar setelah sidebar */
-  background: #ecedee !important;  /* warna kalem */
+  background: #ffffff !important;  /* putih */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 22px;
-  margin: 8px 0 20px 10px; /* sedikit jarak dari sidebar dan header */
-  border-left: none !important;  /* hilangkan garis biru */
+  margin: 8px 0 20px 10px;
+  border-left: none !important;
   box-sizing: border-box;
 }
+
+
+
 
 /* Hilangkan garis/setengah border aneh */
 .card-form-wrapper::before,

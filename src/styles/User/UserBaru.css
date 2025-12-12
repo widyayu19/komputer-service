@@ -52,16 +52,16 @@
 
 /* CARD WARNA KALEM */
 .card-form-wrapper {
-  max-width: 800px;
-  width: calc(100% - 320px);
-  background: #ecedee !important;
+  width: 100%; /* full di dalam container */
+  max-width: none; /* hapus max-width */
+  background: white!important;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 22px;
-  margin: 8px 0 20px 10px;
-  border-left: none !important;
+  padding: 32px;
+  margin: 0; /* atur margin jika perlu */
   box-sizing: border-box;
 }
+
 
 .card-form-wrapper::before,
 .card-form-wrapper::after {

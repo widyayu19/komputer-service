@@ -272,14 +272,13 @@ const DetailServis = () => {
           );
         }}
       >
-        <option value="Diterima">Diterima</option>
-        <option value="Dalam Diagnosa">Dalam Diagnosa</option>
-        <option value="Menunggu Persetujuan">Menunggu Persetujuan</option>
-        <option value="Dalam Pengerjaan">Dalam Pengerjaan</option>
-        <option value="Menunggu Sparepart">Menunggu Sparepart</option>
-        <option value="Selesai">Selesai</option>
-        <option value="Menunggu Pembayaran">Menunggu Pembayaran</option>
-        <option value="Diambil">Diambil</option>
+        <option value="New">New</option>
+<option value="In Progress">In Progress</option>
+<option value="On Hold">On Hold</option>
+<option value="Ready for Pickup">Ready for Pickup</option>
+<option value="Completed">Completed</option>
+<option value="Cancelled">Cancelled</option>
+
       </select>
     )}
   </div>
